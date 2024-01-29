@@ -1,0 +1,231 @@
+/* Styles for larger screens */
+.notes-page-container {
+  padding-top: 70px;
+}
+
+.notes-header {
+  background-color: #001f8b;
+  color: #fff;
+  padding: 20px;
+  width: calc(73% - 40px);
+  position: fixed;
+  margin-left: 27.4%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.group-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #fff;
+}
+
+.right-section {
+  margin-top: -140px;
+  overflow-y: auto;
+  max-height: calc(100vh - 300px);
+}
+
+.notes-container {
+  max-height: calc(100vh - 300px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #aaa transparent;
+}
+.notes-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.notes-container::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+}
+
+.note-box {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  width: 910px;
+  height: auto;
+}
+
+.note-content {
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  align-items: flex-start;
+  word-wrap: break-word;
+  justify-content: left;
+  word-break: break-all;
+  flex: 1;
+}
+
+.note-date {
+  font-size: 12px;
+  color: #777;
+  position: relative;
+  bottom: 0;
+  right: 0;
+  margin-top: auto;
+  margin-left: auto;
+}
+
+.input-container2 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 66vw;
+  height: 110px;
+  padding: 20px;
+  margin-left: 27.4%;
+  margin-bottom: 0px;
+  background-color: #fff;
+  border: 30px solid #001F8B;
+  display: flex;
+  border-radius: 15px;
+  align-items: center;
+}
+
+.input-container2 textarea {
+  flex: 1;
+  width: 100%;
+  height: auto;
+  min-height: 50px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  resize: none;
+}
+
+.input-container2 button {
+  width: 80px;
+  padding: 10px;
+  margin-left: 20px;
+  background-color: #001f8b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.input-container2 button.disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.input-container2 button:hover {
+  background-color: #000;
+}
+
+/* Scroll to top on scroll */
+.notes-container {
+  scroll-behavior: smooth;
+}
+
+.notes-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Styles for smaller screens (below 768px width) */
+@media only screen and (max-width: 768px) {
+  .notes-header {
+    width: 100%;
+    margin-left: 0;
+  }
+  .group-icon{
+    margin-left: 60px;
+  }
+  .back-button{
+    background-color: #001F8B;
+    position: fixed;
+    left: 40px;
+    border: 0;
+    color: #fff;
+    font-size: 30px;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+  }
+  .left-section{
+    display: none;
+  }
+  .right-section{
+    display: block;
+    width: 100%;
+    overflow: hidden;
+  }
+  .note-content {
+    width: auto;
+    max-width: 300px;
+    height: auto;
+    text-align: left;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex: 1;
+    word-wrap: break-word;
+    overflow-x: auto;
+  }
+  .note-date {
+    text-align: left;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    margin-left:0px;
+  }
+  .input-container2 {
+    width: 94%;
+    margin-left: 1%;
+    padding: 10px;
+    border: 1px solid #001F8B;
+    border-radius: 0;
+    align-items: flex-start;
+  }
+  .input-container2 textarea {
+    width: 100%;
+    margin-right: 10px;
+    border-radius: 0;
+    resize: vertical;
+  }
+  .input-container2 button {
+    width: auto;
+    margin-left: auto;
+    margin-top: 10px;
+    border-radius: 0;
+  }
+  .notes-container {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    word-wrap: break-word; 
+    overflow-y: auto;
+  }
+  .note-box {
+    width: 100%;
+    max-width: 400px;
+    white-space:nowrap;
+    height: auto;
+  }
+}
